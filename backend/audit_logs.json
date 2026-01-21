@@ -1,0 +1,45 @@
+[
+  {
+    "id": "20260121231944512334",
+    "timestamp": "2026-01-21T23:19:44.512417",
+    "action_type": "computer_move",
+    "source": "web_app",
+    "performed_by": "admin",
+    "target_object": "PC-001$",
+    "target_type": "computer",
+    "details": {
+      "target_ou": "OU=Servers,DC=example,DC=com",
+      "action": "Bilgisayar OU=Servers,DC=example,DC=com OU'suna taşındı"
+    },
+    "success": true,
+    "error_message": null
+  },
+  {
+    "id": "20260121232004416100",
+    "timestamp": "2026-01-21T23:20:04.416122",
+    "action_type": "group_delete",
+    "source": "web_app",
+    "performed_by": "admin",
+    "target_object": "Domain Users",
+    "target_type": "group",
+    "details": {
+      "action": "Grup silindi"
+    },
+    "success": true,
+    "error_message": null
+  },
+  {
+    "id": "20260121232007469849",
+    "timestamp": "2026-01-21T23:20:07.469883",
+    "action_type": "group_delete",
+    "source": "web_app",
+    "performed_by": "admin",
+    "target_object": "Domain Users",
+    "target_type": "group",
+    "details": {
+      "action": "Grup silindi"
+    },
+    "success": true,
+    "error_message": null
+  }
+]
