@@ -46,7 +46,7 @@
 ## 🚀 Kurulum ve Çalıştırma
 
 ### 1. Hazır Executable (Hızlı Başlangıç)
-> **Not:** `backend/dist` klasörü ve `.exe` dosyası güvenlik ve boyut nedeniyle GitHub'a yüklenmez. Kendi executable dosyanızı oluşturmak için aşağıdaki adımları izleyin:
+> **Not:** `backend/dist` klasörü ve `.exe` dosyası ve kendi executable dosyanızı oluşturmak için aşağıdaki adımları izleyin:
 
 1. **Frontend Build:** `frontend` klasöründe `npm install` ve `npm run build` komutlarını çalıştırın.
 2. **Backend Hazırlık:** `backend` klasöründe `pip install -r requirements.txt` komutunu çalıştırın.
