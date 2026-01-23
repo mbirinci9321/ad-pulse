@@ -19,7 +19,11 @@ from audit_logger import (
 )
 from datetime import datetime
 
-load_dotenv()
+# Öncelikli olarak config.env dosyasını yükle, yoksa .env dosyasını dene
+if os.path.exists("config.env"):
+    load_dotenv("config.env")
+else:
+    load_dotenv()
 
 # Mock mode kontrolü
 MOCK_MODE = os.getenv("MOCK_MODE", "false").lower() == "true"
@@ -1019,11 +1023,12 @@ if __name__ == "__main__":
     import webbrowser
     from threading import Timer
 
-    def open_browser():
-        webbrowser.open("http://localhost:8000")
-
+    port = int(os.getenv("PORT", 8000))
     # Tarayıcıyı 2 saniye sonra aç (serverın başlaması için zaman tanı)
+    def open_browser():
+        webbrowser.open(f"http://localhost:{port}")
+    
     Timer(2, open_browser).start()
     
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=port)
 

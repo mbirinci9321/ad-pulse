@@ -82,13 +82,20 @@ class ADConnection:
         """LDAP sunucusuna bağlan"""
         try:
             ldap_server = Server(self.server, get_info=ALL)
+            
+            # Kullanıcı adını formatla (UPN, NetBIOS veya sadece username)
+            if "@" in self.username or "\\" in self.username:
+                user_dn = self.username
+            else:
+                user_dn = f"{self.username}@{self.domain}"
+                
             self.conn = Connection(
                 ldap_server,
-                user=f"{self.username}@{self.domain}",
+                user=user_dn,
                 password=self.password,
                 auto_bind=True
             )
-            logger.info("LDAP bağlantısı başarılı")
+            logger.info(f"LDAP bağlantısı başarılı: {user_dn}")
             return True
         except Exception as e:
             logger.error(f"LDAP bağlantı hatası: {str(e)}")

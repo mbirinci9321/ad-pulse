@@ -46,10 +46,17 @@
 ## 🚀 Kurulum ve Çalıştırma
 
 ### 1. Hazır Executable (Hızlı Başlangıç)
-Projenin `backend/dist` klasöründeki `AD-Pulse.exe` dosyasını indirip çalıştırabilirsiniz.
-- Yanındaki `config.env.example` dosyasını `config.env` olarak kopyalayın.
+> **Not:** `backend/dist` klasörü ve `.exe` dosyası güvenlik ve boyut nedeniyle GitHub'a yüklenmez. Kendi executable dosyanızı oluşturmak için aşağıdaki adımları izleyin:
+
+1. **Frontend Build:** `frontend` klasöründe `npm install` ve `npm run build` komutlarını çalıştırın.
+2. **Backend Hazırlık:** `backend` klasöründe `pip install -r requirements.txt` komutunu çalıştırın.
+3. **Executable Oluşturma:** `backend` klasöründeki `python build_exe.py` dosyasını çalıştırın.
+4. Bu işlem sonucunda `backend/dist/AD-Pulse.exe` dosyası oluşacaktır.
+
+**Kullanım:**
+- `AD-Pulse.exe` yanındaki `config.env.example` dosyasını `config.env` olarak kopyalayın.
 - AD bağlantı bilgilerinizi girin.
-- `AD-Pulse.exe` dosyasını çalıştırın. Uygulama otomatik olarak tarayıcınızda açılacaktır.
+- `AD-Pulse.exe` dosyasını çalıştırın.
 
 ### 2. Geliştirici Modu (Source Code)
 

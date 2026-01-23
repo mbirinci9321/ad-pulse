@@ -29,3 +29,7 @@ print(f"Build başlatılıyor: {' '.join(cmd)}")
 subprocess.run(cmd, check=True)
 
 print("\nBuild başarılı! 'dist/AD-Pulse.exe' oluşturuldu.")
+
+# config.env.example dosyasını dist klasörüne kopyala
+shutil.copy("config.env.example", "dist/config.env.example")
+print("Örnek konfigürasyon dosyası 'dist/config.env.example' olarak kopyalandı.")
